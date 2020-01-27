@@ -8,6 +8,14 @@ router.get('/', function(req, res, next) {
 title: 'Azure',
 message : process.env.message || " This is development environment"
  };
+ //res.render('index', { title: 'Azure' });
+ var model = 
+{
+title: 'Azure',
+message : process.env.message || "This is dev env"
+
+}; 
+res.render('index', model);
 });
 
 module.exports = router;
